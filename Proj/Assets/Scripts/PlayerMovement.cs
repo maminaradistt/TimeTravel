@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    [SerializeField] private float speed = 5f;
+    public float jumpforce = 3f;
     private Rigidbody2D body;
     private Animator anim;
     private BoxCollider2D boxcollider;
@@ -14,22 +15,11 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update() {
         float horizontal_input = Input.GetAxis("Horizontal");
-        body.velocity = new Vector2(horizontal_input * speed, body.velocity.y);
-
-        if (Input.GetKey(KeyCode.Space)) {
-            Jump();
-        }
-
-        if (horizontal_input > 0.01f) {
-            transform.localScale = Vector3.one;
-        }
-        else if (horizontal_input < 0.01f) {
-            transform.localScale = new Vector3(-1, 1, 1);
+        transform.position += new Vector3(horizontal_input, 0,0) * speed * Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            body.AddForce(new Vector2(0, jumpforce), ForceMode2D.Impulse);
         }
 
         anim.SetBool("run", horizontal_input != 0);
-    }
-    private void Jump() {
-        body.velocity = new Vector2(body.velocity.x, speed);
     }
 }
