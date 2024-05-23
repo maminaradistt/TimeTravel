@@ -1,15 +1,15 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    [SerializeField] private float jumpForce;
+    [SerializeField] private float speed = 5;
+    [SerializeField] private float jumpForce = 7;
     private Rigidbody2D body;
     private Animator anim;
     private BoxCollider2D boxcollider;
     private int jumpCount = 1;
     private bool isGrounded;
-
     [SerializeField] private LayerMask groundLayer;
 
     private void Awake()
@@ -18,8 +18,7 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         boxcollider = GetComponent<BoxCollider2D>();
     }
-
-    private void Update()
+     private void Update()
     {
         float horizontal_input = Input.GetAxis("Horizontal");
         body.velocity = new Vector2(horizontal_input * speed, body.velocity.y);

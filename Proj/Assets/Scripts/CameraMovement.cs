@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
@@ -5,14 +6,25 @@ public class CameraMovement : MonoBehaviour
     private Transform player;
     public GameObject gobject;
     public Transform pos;
+    public Transform[] transforms = new Transform[3];
+    public float speed = 5.0f;
+    public float rotatespeed = 10f;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update() {
-        if (Input.GetKey(KeyCode.LeftShift))
+        float posX;
+        if (Input.GetKey(KeyCode.LeftAlt))
             pos.position = new Vector2(0, 0);
+        for (int i = 0; i < transforms.Length; i++) {
+            if (transforms[i] == null) continue;
+            transforms[i].Translate(new Vector2(1,0)*speed*Time.deltaTime);
+            posX = transforms[i].position.x;
+            if (posX > 10f && transforms[i].gameObject.name == "Cube")
+                Destroy(transforms[i].gameObject);
+        }
     }
     void LateUpdate()
     {
