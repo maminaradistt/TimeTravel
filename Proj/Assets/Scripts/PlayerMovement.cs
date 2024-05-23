@@ -3,8 +3,8 @@ using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    [SerializeField] private float jumpForce;
+    [SerializeField] private float speed = 5;
+    [SerializeField] private float jumpForce = 7;
     private Rigidbody2D body;
     private Animator anim;
     private BoxCollider2D boxcollider;
