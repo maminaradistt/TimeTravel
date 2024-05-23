@@ -16,8 +16,6 @@ public class CameraMovement : MonoBehaviour
 
     void Update() {
         float posX;
-        if (Input.GetKey(KeyCode.LeftAlt))
-            pos.position = new Vector2(0, 0);
         for (int i = 0; i < transforms.Length; i++) {
             if (transforms[i] == null) continue;
             transforms[i].Translate(new Vector2(1,0)*speed*Time.deltaTime);
