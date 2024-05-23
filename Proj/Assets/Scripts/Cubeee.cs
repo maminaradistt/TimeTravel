@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,8 +24,10 @@ public class Cubeee : MonoBehaviour
         Health -= 1;
         body.velocity = new Vector2(body.velocity.x, 5);
         }
-    }
-    private void OnCollisionExit2D(Collision2D other) {
+        else if (other.gameObject.tag == "Ground") {
+            isTouching = false;
+        }
+        
     }
     private void CheckHealth() {
         if (Health == 2)
