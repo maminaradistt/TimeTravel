@@ -5,7 +5,6 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 7f;
-    [SerializeField] private float lives = 5;
     private Rigidbody2D body;
     private Animator anim;
     private BoxCollider2D boxcollider;
@@ -23,14 +22,10 @@ public class PlayerMovement : MonoBehaviour
     }
      private void Update()
     {
+        if (isGrounded) State = States.idle; 
         if (Input.GetButton("Horizontal")) Run();
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Jump();
-        }
-
-       
-
+        if (Input.GetKeyDown(KeyCode.Space)) Jump();
+   
         CheckGrounded(); 
     }
 
@@ -52,20 +47,23 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpCount = 1;
         }
+        else State = States.jump;
     }
     public enum States
     {
         idle, run, jump 
     }
-   
+    private States State
+    {
+        get {return (States)anim.GetInteger("state"); }
+        set { anim.SetInteger("state", (int)value); }
+    }
     private void Run()
     {
+        if (isGrounded) State = States.run;
         Vector3 horizontal_input = transform.right * Input.GetAxis("Horizontal");
         transform.position = Vector3.MoveTowards(transform.position, transform.position + horizontal_input, speed * Time.deltaTime);
        sprite.flipX = horizontal_input.x < 0;
-        anim.SetBool("run", horizontal_input.x != 0);
-        
-
     }
 
 }
