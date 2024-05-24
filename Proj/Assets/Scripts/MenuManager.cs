@@ -7,7 +7,7 @@ public class MenuManager : MonoBehaviour
 {
     public GameObject panelSettings;
 
-    // Start is called before the first frame update
+  
     public void Start()
     {
         panelSettings.SetActive(false);
@@ -43,6 +43,6 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
         Debug.Log("Ви вийшли");
     }
-    // Update is called once per frame
+    
   
 }
