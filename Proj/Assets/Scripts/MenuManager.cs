@@ -7,7 +7,7 @@ public class MenuManager : MonoBehaviour
 {
     public GameObject panelSettings;
 
-    // Start is called before the first frame update
+  
     public void Start()
     {
         panelSettings.SetActive(false);
@@ -15,7 +15,7 @@ public class MenuManager : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Levell1");
     }
 
     public void Back()
@@ -38,11 +38,26 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    public void level1()
+    {
+        SceneManager.LoadScene("Levell1");
+    }
+
+    public void level2()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+
+    public void level3()
+    {
+        SceneManager.LoadScene("Level0");
+    }
+
     public void Exit()
     {
         Application.Quit();
         Debug.Log("Ви вийшли");
     }
-    // Update is called once per frame
+    
   
 }
