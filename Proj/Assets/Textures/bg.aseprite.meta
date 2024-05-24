@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: db95433a043460e469fef26c11a5955e
+guid: 5e347498cbc29424d888c0e4365a8b88
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ ScriptedImporter:
     applyGammaDecoding: 0
   previousAsepriteImporterSettings:
     fileImportMode: 1
-    importHiddenLayers: 1
+    importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
@@ -84,7 +84,7 @@ ScriptedImporter:
     addShadowCasters: 0
   asepriteImporterSettings:
     fileImportMode: 1
-    importHiddenLayers: 1
+    importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638521094221474225
+  platformSettingsDirtyTick: 0
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,27 +119,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: grass_Frame_0
-    originalName: 
-    pivot: {x: 0.5, y: -0.14705883}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 292
-      y: 160
-      width: 140
-      height: 34
-    spriteID: 8b818d123f31ddd4c9725c88605b69e5
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 292, y: 160}
-  - name: grass_Frame_1
+  - name: bg_Frame_1
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -150,7 +130,7 @@ ScriptedImporter:
       y: 160
       width: 280
       height: 49
-    spriteID: 8d62ebc93be2d1942ac0af71d9d27ad2
+    spriteID: 7388cb9e30fba444f963328cafd6d0f1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -159,7 +139,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 160}
-  - name: grass_Frame_2
+  - name: bg_Frame_2
     originalName: 
     pivot: {x: 0.3727273, y: -0.8965517}
     alignment: 9
@@ -167,10 +147,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 392
-      y: 82
+      y: 160
       width: 110
       height: 29
-    spriteID: 1e185df27699a3744b749c6c0b059383
+    spriteID: 982b6c97dd3ff544eb038f0ed7dba1a9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -178,8 +158,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 392, y: 82}
-  - name: grass_Frame_3
+    uvTransform: {x: 392, y: 160}
+  - name: bg_Frame_3
     originalName: 
     pivot: {x: 0.76000005, y: -1}
     alignment: 9
@@ -187,10 +167,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 440
-      y: 160
+      y: 4
       width: 25
       height: 26
-    spriteID: cc7efc6bcc91132498af7a4fa564edb2
+    spriteID: c37cc770a7a2dd848aabd6f9e3d3cdc3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -198,8 +178,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 440, y: 160}
-  - name: grass_Frame_4
+    uvTransform: {x: 440, y: 4}
+  - name: bg_Frame_4
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -210,7 +190,7 @@ ScriptedImporter:
       y: 4
       width: 280
       height: 70
-    spriteID: 75bcd9ab18b6d68468cee768479c34dd
+    spriteID: 74c9a3a50f368de45ac7af5bcdba149d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -219,7 +199,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: grass_Frame_5
+  - name: bg_Frame_5
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -230,7 +210,7 @@ ScriptedImporter:
       y: 4
       width: 140
       height: 70
-    spriteID: 31c960aee0dcfe841b8efe474633fd60
+    spriteID: 1b1eeb5f295c7dc4eb38aa4879e6a784
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -239,7 +219,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 292, y: 4}
-  - name: grass_Frame_6
+  - name: bg_Frame_6
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -250,7 +230,7 @@ ScriptedImporter:
       y: 82
       width: 280
       height: 70
-    spriteID: f29b246c720412746ae55426aa7fa50f
+    spriteID: 0ce054106edfbb945988279eabb61e51
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -259,7 +239,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 82}
-  - name: grass_Frame_7
+  - name: bg_Frame_7
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -270,7 +250,7 @@ ScriptedImporter:
       y: 280
       width: 280
       height: 29
-    spriteID: a84889b7e0540bd47afff889a494ba57
+    spriteID: 93437a39fd5b84648a0256d419542895
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -279,7 +259,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 280}
-  - name: grass_Frame_8
+  - name: bg_Frame_8
     originalName: 
     pivot: {x: 0.6521739, y: -0.30952382}
     alignment: 9
@@ -287,10 +267,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 292
-      y: 82
+      y: 160
       width: 92
       height: 42
-    spriteID: eddfa140a5514d34eb2a86caca9df189
+    spriteID: 1d66845bc1c3b2642aede368da7275d0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -298,8 +278,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 292, y: 82}
-  - name: grass_Frame_9
+    uvTransform: {x: 292, y: 160}
+  - name: bg_Frame_9
     originalName: 
     pivot: {x: 0.48523206, y: -0.12727273}
     alignment: 9
@@ -310,7 +290,7 @@ ScriptedImporter:
       y: 217
       width: 237
       height: 55
-    spriteID: a0f0e5188ffc00d4bbab2af4cf27dce3
+    spriteID: b7508a47e6badd34c8e325f72f46d54b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -322,131 +302,87 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -467215820
-    name: grass
+    guid: 1259326109
+    name: bg
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: grass_Frame_0
-      frameIndex: 0
-      cellRect:
-        x: 70
-        y: 5
-        width: 140
-        height: 34
-      spriteId: 8b818d123f31ddd4c9725c88605b69e5
-    - name: grass_Frame_1
+    - name: bg_Frame_1
       frameIndex: 1
       cellRect:
         x: 0
         y: 0
         width: 280
         height: 49
-      spriteId: 8d62ebc93be2d1942ac0af71d9d27ad2
-    - name: grass_Frame_2
+      spriteId: 7388cb9e30fba444f963328cafd6d0f1
+    - name: bg_Frame_2
       frameIndex: 2
       cellRect:
         x: 99
         y: 26
         width: 110
         height: 29
-      spriteId: 1e185df27699a3744b749c6c0b059383
-    - name: grass_Frame_3
+      spriteId: 982b6c97dd3ff544eb038f0ed7dba1a9
+    - name: bg_Frame_3
       frameIndex: 3
       cellRect:
         x: 121
         y: 26
         width: 25
         height: 26
-      spriteId: cc7efc6bcc91132498af7a4fa564edb2
-    - name: grass_Frame_4
+      spriteId: c37cc770a7a2dd848aabd6f9e3d3cdc3
+    - name: bg_Frame_4
       frameIndex: 4
       cellRect:
         x: 0
         y: 0
         width: 280
         height: 70
-      spriteId: 75bcd9ab18b6d68468cee768479c34dd
-    - name: grass_Frame_5
+      spriteId: 74c9a3a50f368de45ac7af5bcdba149d
+    - name: bg_Frame_5
       frameIndex: 5
       cellRect:
         x: 70
         y: 0
         width: 140
         height: 70
-      spriteId: 31c960aee0dcfe841b8efe474633fd60
-    - name: grass_Frame_6
+      spriteId: 1b1eeb5f295c7dc4eb38aa4879e6a784
+    - name: bg_Frame_6
       frameIndex: 6
       cellRect:
         x: 0
         y: 0
         width: 280
         height: 70
-      spriteId: f29b246c720412746ae55426aa7fa50f
-    - name: grass_Frame_7
+      spriteId: 0ce054106edfbb945988279eabb61e51
+    - name: bg_Frame_7
       frameIndex: 7
       cellRect:
         x: 0
         y: 0
         width: 280
         height: 29
-      spriteId: a84889b7e0540bd47afff889a494ba57
-    - name: grass_Frame_8
+      spriteId: 93437a39fd5b84648a0256d419542895
+    - name: bg_Frame_8
       frameIndex: 8
       cellRect:
         x: 80
         y: 13
         width: 92
         height: 42
-      spriteId: eddfa140a5514d34eb2a86caca9df189
-    - name: grass_Frame_9
+      spriteId: 1d66845bc1c3b2642aede368da7275d0
+    - name: bg_Frame_9
       frameIndex: 9
       cellRect:
         x: 25
         y: 7
         width: 237
         height: 55
-      spriteId: a0f0e5188ffc00d4bbab2af4cf27dce3
+      spriteId: b7508a47e6badd34c8e325f72f46d54b
     linkedCells: []
     parentIndex: -1
-  platformSettings:
-  - name: DefaultTexturePlatform
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Server
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
+  platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 280, y: 70}
