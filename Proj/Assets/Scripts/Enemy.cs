@@ -3,7 +3,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public Animator anim;
-    public float speed = 1.5f;
+    public float speed = 0.1f;
     private Transform player; 
     void Start()
     {
@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, player.position, (speed * Time.deltaTime)/5);
     }
 
     
