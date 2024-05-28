@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,10 +7,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D body;
     private Animator anim;
     private BoxCollider2D boxcollider;
-    private int jumpCount = 1;
-    private bool isGrounded;
-    [SerializeField] private LayerMask groundLayer;
+    private int jumpCount = 0;
     private SpriteRenderer sprite;
+    private GroundCheck groundCheck;
 
     private void Awake()
     {
@@ -19,51 +17,67 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         boxcollider = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
+        groundCheck = GetComponentInChildren<GroundCheck>();
     }
-     private void Update()
+
+    private void Update()
     {
-        if (isGrounded) State = States.idle; 
+        if (groundCheck.isGrounded) State = States.idle;
         if (Input.GetButton("Horizontal")) Run();
         if (Input.GetKeyDown(KeyCode.Space)) Jump();
-   
-        CheckGrounded(); 
+
+        if (groundCheck.isGrounded)
+        {
+            jumpCount = 0;
+        }
+
+        UpdateState();
     }
 
     private void Jump()
     {
-        if (isGrounded || jumpCount < 2)
+        if (groundCheck.isGrounded || jumpCount < 2)
         {
             body.velocity = new Vector2(body.velocity.x, jumpForce);
             jumpCount++;
-            isGrounded = false;
+            if (groundCheck.isGrounded)
+            {
+                groundCheck.isGrounded = false;
+            }
         }
     }
 
-    private void CheckGrounded()
+    private void UpdateState()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxcollider.bounds.center, boxcollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
-        isGrounded = raycastHit.collider != null;
-        if (isGrounded)
+        if (!groundCheck.isGrounded && body.velocity.y != 0)
         {
-            jumpCount = 1;
+            State = States.jump;
         }
-        else State = States.jump;
+        else if (Input.GetButton("Horizontal"))
+        {
+            State = States.run;
+        }
+        else
+        {
+            State = States.idle;
+        }
     }
+
     public enum States
     {
-        idle, run, jump 
-    }
-    private States State
-    {
-        get {return (States)anim.GetInteger("state"); }
-        set { anim.SetInteger("state", (int)value); }
-    }
-    private void Run()
-    {
-        if (isGrounded) State = States.run;
-        Vector3 horizontal_input = transform.right * Input.GetAxis("Horizontal");
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + horizontal_input, speed * Time.deltaTime);
-       sprite.flipX = horizontal_input.x < 0;
+        idle, run, jump
     }
 
+    private States State
+    {
+        get { return (States)anim.GetInteger("state"); }
+        set { anim.SetInteger("state", (int)value); }
+    }
+
+    private void Run()
+    {
+        Vector3 horizontal_input = transform.right * Input.GetAxis("Horizontal");
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + horizontal_input, speed * Time.deltaTime);
+        sprite.flipX = horizontal_input.x < 0;
+    }
 }
