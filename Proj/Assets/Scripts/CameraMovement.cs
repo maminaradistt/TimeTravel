@@ -28,7 +28,7 @@ public class CameraMovement : MonoBehaviour
     {
         Vector3 temp = transform.position;
         temp.x = player.position.x;
-        temp.y = player.position.y;
+        temp.y = player.position.y +2.2f;
 
         transform.position = temp;
     }
